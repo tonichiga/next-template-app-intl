@@ -1,14 +1,14 @@
-import {useTranslations} from 'next-intl';
-import {ReactNode} from 'react';
-import ExternalLink from './ExternalLink';
+import { useTranslations } from "next-intl";
+import { ReactNode } from "react";
+import ExternalLink from "../shared/components/navigate/external-link";
 
 type Props = {
   children?: ReactNode;
   title: ReactNode;
 };
 
-export default function PageLayout({children, title}: Props) {
-  const t = useTranslations('PageLayout');
+export default function PageLayout({ children, title }: Props) {
+  const t = useTranslations("PageLayout");
 
   return (
     <div className="relative flex grow flex-col bg-slate-850 py-36">
@@ -22,14 +22,14 @@ export default function PageLayout({children, title}: Props) {
         <div className="mt-6 text-gray-400 md:text-lg">{children}</div>
         <div className="mt-auto grid grid-cols-1 gap-4 pt-20 md:grid-cols-2 lg:gap-12">
           <ExternalLink
-            description={t('links.docs.description')}
-            href={t('links.docs.href')}
-            title={t('links.docs.title')}
+            description={t("links.docs.description")}
+            href={t("links.docs.href")}
+            title={t("links.docs.title")}
           />
           <ExternalLink
-            description={t('links.source.description')}
-            href={t('links.source.href')}
-            title={t('links.source.title')}
+            description={t("links.source.description")}
+            href={t("links.source.href")}
+            title={t("links.source.title")}
           />
         </div>
       </div>

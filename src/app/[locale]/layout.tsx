@@ -7,7 +7,7 @@ import {
   unstable_setRequestLocale,
 } from "next-intl/server";
 import { ReactNode } from "react";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/general/widgets/navigation/navigation";
 import { locales } from "@/config";
 
 const inter = Inter({ subsets: ["latin"] });
